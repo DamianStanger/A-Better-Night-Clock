@@ -17,4 +17,18 @@
 	    android:textSize="15sp"
 	    android:textColor="#004400"/>
 	    
+	 <TextView 
+	 	android:id="@+id/airplainLabel"
+	    android:layout_width="fill_parent" 
+	    android:layout_height="wrap_content"
+	 	android:textColor="#004400"
+	 	android:text="@string/aeroplaneLabel"/>
+	 	
+	 <Button
+	 	android:id="@+id/airplainModeButton"
+	    android:layout_width="fill_parent" 
+	    android:layout_height="wrap_content"
+	 	android:textColor="#004400"
+	 	android:text="@string/aeroplaneOn"/>
+	    
 </LinearLayout>

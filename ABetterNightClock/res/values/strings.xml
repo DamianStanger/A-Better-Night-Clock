@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="hello">NightClock, NightClock, im a night Clock!!!z</string>
+    <string name="aeroplaneLabel">Aeroplane mode: </string>
+    <string name="aeroplaneOn">On</string>
+    <string name="aeroplaneOff">Off</string>
     <string name="app_name">A Better Night Clock</string>
 </resources>
