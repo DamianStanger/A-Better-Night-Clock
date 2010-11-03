@@ -27,7 +27,8 @@ public class NightClock extends Activity {
         goToFullscreenMode(); 
         setContentView(R.layout.main);
         setTodaysDate();
-        turnAirplaneModeOff();               
+        //turnAirplaneModeOff();  
+        UpdateAirplaneNotificationDisplay();
     }
 	
 	private void UpdateAirplaneNotificationDisplay() {
@@ -46,14 +47,12 @@ public class NightClock extends Activity {
 	private void turnAirplaneModeOff() {
 		Context applicationContext = this.getApplicationContext();
 		Settings.System.putInt(applicationContext.getContentResolver(),
-				      		   Settings.System.AIRPLANE_MODE_ON, AEROPLANEMODEOFF);	
-		UpdateAirplaneNotificationDisplay();
+				      		   Settings.System.AIRPLANE_MODE_ON, AEROPLANEMODEOFF);			
 	}
 
 	private void turnAirplaneModeOn() {		
 		Settings.System.putInt(applicationContext.getContentResolver(),
 				      		   Settings.System.AIRPLANE_MODE_ON, AEROPLANEMODEON);
-		UpdateAirplaneNotificationDisplay();
 	}
 	
 	private boolean aeroplaneModeIsOn() {
