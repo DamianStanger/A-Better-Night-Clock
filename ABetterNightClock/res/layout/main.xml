@@ -29,6 +29,7 @@
 	    android:layout_width="fill_parent" 
 	    android:layout_height="wrap_content"
 	 	android:textColor="#004400"
-	 	android:text="@string/aeroplaneOn"/>
+	 	android:text="@string/aeroplaneOn"
+	 	android:background="#000000"/>
 	    
 </LinearLayout>

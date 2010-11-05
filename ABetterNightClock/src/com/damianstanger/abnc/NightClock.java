@@ -6,6 +6,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.ContextWrapper;
 import android.os.Bundle;
+import android.os.PowerManager;
 import android.provider.Settings;
 import android.view.View;
 import android.view.Window;
@@ -29,8 +30,20 @@ public class NightClock extends Activity {
         setTodaysDate();
         //turnAirplaneModeOff();  
         UpdateAirplaneNotificationDisplay();
+        turnOffButtonLights();
     }
 	
+	private void turnOffButtonLights() {
+//		WindowManager.LayoutParams lp = getWindow().getAttributes();
+//		lp.buttonBrightness = 0;
+		
+		PowerManager pm = (PowerManager) getSystemService(Context.POWER_SERVICE);
+		PowerManager.WakeLock wl = pm.newWakeLock(PowerManager.SCREEN_DIM_WAKE_LOCK, "My Tag");
+		wl.acquire();
+		   //screen will stay on during this section...
+		//wl.release();
+	}
+
 	private void UpdateAirplaneNotificationDisplay() {
 		View objButton = findViewById(R.id.airplainModeButton);
 		Button airplaneButton=(Button)objButton;
